@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KubatShop</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+<header>
+    <button class="btn"><a href="/add-tv/">Drunk</a></button>
+    <p class="student"></p>
+</header>
+<div>
+    <ul>
+        {% for i in post %}
+            <li>
+                <h2 class="title">{{ i.title }}</h2>
+                <div class="div_image">
+                <img src="{{ i.image.url }}" class="image">
+                </div>
+                <p class="description">{{ i.description }}</p>
+                <div class="div_btn">
+                <button class="btn"><a href="/posts/{{i.id}}" >Взглянуть</a></button>
+                </div>
+                <p class="date">{{ i.created_date }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

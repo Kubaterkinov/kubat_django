@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{post_id.title}}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+</head>
+<body>
+    <div>
+        <h1 class="title">{{post_id.title}}</h1>
+        <img src="{{post_id.image.url}}" class="image">
+        <p class="description">{{post_id.description}}</p>
+    </div>
+</body>
+</html>
